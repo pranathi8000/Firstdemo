@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade</title>
+</head>
+<body>
+
+    <h1>Student Grade</h1>
+
+    <p>Enter Student Score (0-100):</p>
+    <input type="number" id="score" min="0" max="100">
+    <button onclick="getGrade()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function getGrade() {
+            var score = document.getElementById('score').value;
+            var grade = '';
+
+            if (score >= 90) {
+                grade = 'A';
+            } else if (score >= 80) {
+                grade = 'B';
+            } else if (score >= 70) {
+                grade = 'C';
+            } else if (score >= 60) {
+                grade = 'D';
+            } else {
+                grade = 'F';
+            }
+
+            document.getElementById('result').innerText = "Grade: " + grade;
+        }
+    </script>
+
+</body>
+</html>
